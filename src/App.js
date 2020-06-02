@@ -2,7 +2,6 @@ import React from "react";
 import logo from "./logo.svg";
 import "./App.css";
 import AutoCompleteText from "./AutoCompleteText";
-import friends from "./friends";
 import MovieInfo from "./MovieInfo";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
@@ -15,7 +14,7 @@ function Main() {
         </h1>
       </div>
       <div className="App-Component">
-        <AutoCompleteText items={friends} />
+        <AutoCompleteText  />
       </div>
     </div>
   );
