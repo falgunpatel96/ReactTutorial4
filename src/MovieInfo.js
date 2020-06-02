@@ -1,6 +1,4 @@
 import React from 'react';
-import CardDetails from './CardDetails';
-import { link } from 'react-router-dom';
 
 export default class MovieInfo extends React.Component {
     
@@ -29,10 +27,24 @@ export default class MovieInfo extends React.Component {
     
     render() {
         // this.getMovieInfo()
-
+        const {movieDetail} = this.state;
         return (
-            <div>
-                <CardDetails movieDetail={this.state.movieDetail} />
+            <div> 
+                <Card className="card text-center mx-auto" style={{width: '600px', marginTop: '75px'}}>
+                <Card.Header className="card-header bg-info">
+                    <b>{movieDetail.type}</b>
+                </Card.Header>
+                <Card.Body className="card-body">
+                    <Card.Title className="card-title"> {movieDetail.title} </Card.Title>
+                    <Card.Text className="card-text"> <b> Description: </b> {movieDetail.description} </Card.Text>        
+                </Card.Body>
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item"> <b> Cast: </b> {movieDetail.cast} </li>
+                    <li class="list-group-item"> <b> Rating: </b> {movieDetail.rating} </li>
+                    <li class="list-group-item"> <b> Duration: </b> {movieDetail.duration} </li>
+                    <li class="list-group-item"> <b> Release Date: </b>  {movieDetail.date_added} </li>
+                </ul>
+                </Card>
             </div>
         )
     }
