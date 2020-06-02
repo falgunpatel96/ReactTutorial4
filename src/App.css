@@ -13,6 +13,12 @@
   }
 }
 
+.label {
+  display: flex;
+  flex-direction: column;
+  font-family: "Times New Roman", Times, serif;
+  color: rgb(16, 167, 91);
+}
 .App-header {
   background-color: #282c34;
   min-height: 100vh;
