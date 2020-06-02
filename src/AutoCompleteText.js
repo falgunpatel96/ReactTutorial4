@@ -1,6 +1,6 @@
 import React from 'react';
 import './AutoCompleteText.css';
-import Card from './Card';
+import MovieCard from './MovieCard';
 // import MovieInfo from './MovieInfo';
 import { Link } from 'react-router-dom'
 
@@ -56,7 +56,7 @@ export default class AutoCompleteText extends React.Component {
                         suggestions.map(({ title, type, show_id }, key) =>
                             <div class="col col-sm-3 mt-3">
                                 <Link to={`/movie-info/${show_id}`} >
-                                    <Card key={key} title={title} type={type}/>
+                                    <MovieCard key={key} title={title} type={type}/>
                                 </Link>
                             </div>
                         )
