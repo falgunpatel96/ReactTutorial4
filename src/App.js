@@ -1,25 +1,29 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
+import AutoCompleteText from './AutoCompleteText';
+import friends from './friends'
+import MovieInfo from './MovieInfo'
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
+
+function Main() {
+  return (
+    <div className="App">
+      <div className="App-Component">
+        <AutoCompleteText items={friends} />
+      </div>
+    </div>
+  )
+}
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <Route path="/movie-info/:show_id" exact component={MovieInfo} />
+      <Route path="/" exact component={Main} />
+    </Router>
+
+
   );
 }
 
