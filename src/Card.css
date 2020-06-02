@@ -1,3 +1,15 @@
 .card {
     min-height: 150px;
 }
+
+.card-title {
+    color: black;
+}
+
+.card-type {
+    color: teal;
+}
+
+.card-body {
+    background-color: skyblue;
+}

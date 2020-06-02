@@ -9,7 +9,7 @@ export default class Card extends React.Component {
             <div className="card">
                 <div className="card-body">
                     <h5 className="card-title">{title}</h5>
-                    <h5 className="card-title">{type}</h5>
+                    <h5 className="card-type">{type}</h5>
                 </div>
             </div>
         )
