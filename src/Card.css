@@ -4,12 +4,13 @@
     /* color: red; */
 }
 
-.card-title {
-    color: slateblue;
-}
-
 .card-body {
     background-color: skyblue;
+    min-height: 150px;
+}
+
+.card-title {
+    color: black;
 }
 
 .card-type {
